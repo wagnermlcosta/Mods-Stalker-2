@@ -10,7 +10,7 @@
 import re
 
 INPUT_FILE = "MarkerPrototypes.cfg"
-OUTPUT_FILE = "MarkerPrototypes_patched_Markers.cfg"
+OUTPUT_FILE = "MarkerPrototypes_patched_MarkerRevealDistance.cfg"
 
 MARKER_LINE = "\tMarkerRevealDistance = 1000000.0"
 

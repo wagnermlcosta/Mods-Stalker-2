@@ -10,7 +10,7 @@
 import re
 
 INPUT_FILE = "CorpseClueStashPrototypes.cfg"
-OUTPUT_FILE = "CorpseClueStashPrototypes_patched_StashFinder.cfg"
+OUTPUT_FILE = "CorpseClueStashPrototypes_patched_BaseSpawnChance.cfg"
 
 MARKER_LINE = "\tBaseSpawnChance = 1.0"
 
