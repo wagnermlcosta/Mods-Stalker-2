@@ -16,7 +16,7 @@ This is my workspace where I create different types of game adjustments:
 6. **SwayReduced50%_HoldBreathForAll** - 50% less sway + hold breath for all weapons
 7. **SwayReduced50%_VanillaHoldBreath** - 50% less sway + vanilla hold breath system
 8. **VanillaSway_HoldBreathForAll** - Vanilla sway + hold breath for all weapons
-9. **Vault_Sensitivity** - Vault/climbing sensitivity
+9. **Vault_Sensitivity** - Vault climbing + sensitivity
 
 ## 🐍 My Python Scripts
 
