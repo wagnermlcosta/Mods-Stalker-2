@@ -7,7 +7,7 @@
 # - PRESERVAR indentação original
 
 INPUT_FILE = "DifficultyPrototypes.cfg"
-OUTPUT_FILE = "DifficultyPrototypes_patched_Damage.cfg"
+OUTPUT_FILE = "DifficultyPrototypes_patch_Damage.cfg"
 
 with open(INPUT_FILE, "r", encoding="utf-8") as f:
     lines = f.readlines()
