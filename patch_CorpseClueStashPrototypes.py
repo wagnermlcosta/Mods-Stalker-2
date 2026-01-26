@@ -6,13 +6,14 @@
 # - Se não existir, inserir
 # - Garantir que struct.begin contenha a chave {bpatch}
 # - Remover todo conteúdo fora dos nodes (structs de nível superior)
+# - PRESERVAR indentação original
 
 import re
 
 INPUT_FILE = "CorpseClueStashPrototypes.cfg"
 OUTPUT_FILE = "CorpseClueStashPrototypes_patch_StashFinder.cfg"
 
-MARKER_LINE = "\tBaseSpawnChance = 1.0"
+MARKER_KEY = "BaseSpawnChance = 1.0"
 
 with open(INPUT_FILE, "r", encoding="utf-8") as f:
     lines = f.readlines()
@@ -20,6 +21,9 @@ with open(INPUT_FILE, "r", encoding="utf-8") as f:
 output = []
 nesting_level = 0  # Contador de níveis de aninhamento
 inside_top_level_struct = False  # Flag para saber se estamos dentro de um struct de nível superior
+top_level_indent = ""
+struct_end_indent = ""
+param_indent = ""
 
 for line in lines:
     stripped = line.strip()
@@ -34,6 +38,9 @@ for line in lines:
             prefix = line.split("struct.begin")[0]
             node_header = f"{prefix}struct.begin {{bpatch}}\n"
             output.append(node_header)
+            top_level_indent = prefix
+            struct_end_indent = prefix[: len(prefix) - len(prefix.lstrip())]
+            param_indent = ""
             continue
         # Para structs aninhadas, não adiciona nada (remove completamente)
         continue
@@ -43,8 +50,9 @@ for line in lines:
         nesting_level -= 1
 
         if nesting_level == 0:  # Fim de struct de nível superior
-            output.append(f"{MARKER_LINE}\n")
-            output.append("struct.end\n")
+            marker_indent = param_indent or f"{top_level_indent}\t"
+            output.append(f"{marker_indent}{MARKER_KEY}\n")
+            output.append(f"{struct_end_indent}struct.end\n")
             inside_top_level_struct = False
             continue
         # Para structs aninhadas, não adiciona nada (remove completamente)
@@ -52,6 +60,8 @@ for line in lines:
 
     # Dentro de structs de nível superior, ignora todos os parâmetros
     if nesting_level > 0:
+        if nesting_level == 1 and not param_indent and stripped and stripped != "struct.end":
+            param_indent = line[: len(line) - len(line.lstrip())]
         continue
 
     # Linhas fora de nodes são IGNORADAS (removidas)
