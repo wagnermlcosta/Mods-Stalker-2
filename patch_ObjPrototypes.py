@@ -7,7 +7,7 @@
 # - PRESERVAR indentação original
 
 INPUT_FILE = "ObjPrototypes.cfg"
-OUTPUT_FILE = "ObjPrototypes_patch_VaultSensitivity.cfg"
+OUTPUT_FILE = "ObjPrototypes_patch_BetterSkif.cfg"
 
 with open(INPUT_FILE, "r", encoding="utf-8") as f:
     lines = f.readlines()
