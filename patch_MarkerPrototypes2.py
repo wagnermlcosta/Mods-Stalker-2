@@ -2,8 +2,10 @@
 # Regras:
 # - Para cada node (struct.begin ... struct.end) de NÍVEL SUPERIOR:
 # - Remover todos os parâmetros existentes
-# - Inserir MarkerRevealDistance = 800.0
-# - Inserir MarkerExploreDistance = 800.0
+# - Inserir MarkerRevealDistance = 0.0
+# - Inserir MarkerExploreDistance = 0.0
+# - Inserir InitDiscoverState = EMarkerState::Hidden
+# - Inserir MarkType = EMarkerType::None
 # - Garantir que struct.begin contenha a chave {bpatch}
 # - Remover todo conteúdo fora dos nodes (structs de nível superior)
 # - PRESERVAR indentação original
@@ -13,8 +15,10 @@ import re
 INPUT_FILE = "MarkerPrototypes.cfg"
 OUTPUT_FILE = "MarkerPrototypes_patch_ImmersiveMap.cfg"
 
-MARKER_REVEAL_KEY = "MarkerRevealDistance = 800.0"
-MARKER_EXPLORE_KEY = "MarkerExploreDistance = 800.0"
+MARKER_REVEAL_KEY = "MarkerRevealDistance = 0.0"
+MARKER_EXPLORE_KEY = "MarkerExploreDistance = 0.0"
+MARKER_INIT_STATE_KEY = "InitDiscoverState = EMarkerState::Hidden"
+MARKER_TYPE_KEY = "MarkType = EMarkerType::None"
 
 with open(INPUT_FILE, "r", encoding="utf-8") as f:
     lines = f.readlines()
@@ -56,6 +60,8 @@ for line in lines:
             marker_indent = param_indent or f"{top_level_indent}\t"
             output.append(f"{marker_indent}{MARKER_REVEAL_KEY}\n")
             output.append(f"{marker_indent}{MARKER_EXPLORE_KEY}\n")
+            output.append(f"{marker_indent}{MARKER_INIT_STATE_KEY}\n")
+            output.append(f"{marker_indent}{MARKER_TYPE_KEY}\n")
             output.append(f"{struct_end_indent}struct.end\n")
             inside_top_level_struct = False
             continue
