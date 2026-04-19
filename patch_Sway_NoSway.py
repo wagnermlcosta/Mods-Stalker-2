@@ -6,6 +6,7 @@ OUTPUT_FILE = "WeaponGeneralSetupPrototypes_patch_Sway.cfg"
 # "weapon"             -> Apenas AimingEffects
 # "attach_true"        -> Apenas CanHoldBreath = true
 # "attach_breath_true" -> CanHoldBreath = true + Scope + AimingEffects
+# "attach_scope_only"  -> Scope + AimingEffects, sem CanHoldBreath
 MODE = "weapon"
 
 
@@ -62,9 +63,24 @@ def build_template(indent, name):
             f"{indent}struct.end\n",
         ]
 
+    elif MODE == "attach_scope_only":
+        return [
+            f"{indent}{name} struct.begin {{bpatch}}\n",
+            f"{indent}   Scope : struct.begin {{bpatch}}\n",
+            f"{indent}      AimingEffects : struct.begin {{bpatch}}\n",
+            f"{indent}         PlayerOnlyEffects : struct.begin {{bpatch}}\n",
+            f"{indent}            [*] = LessSwayX\n",
+            f"{indent}            [*] = LessSwayY\n",
+            f"{indent}            [*] = LessSwayTime\n",
+            f"{indent}         struct.end\n",
+            f"{indent}      struct.end\n",
+            f"{indent}   struct.end\n",
+            f"{indent}struct.end\n",
+        ]
+
     else:
         raise ValueError(
-            "MODE inválido! Use 'attach', 'weapon', 'attach_true' ou 'attach_breath_true'."
+            "MODE inválido! Use 'attach', 'weapon', 'attach_true', 'attach_breath_true' ou 'attach_scope_only'."
         )
 
 
