@@ -1,5 +1,5 @@
-INPUT_FILE = "ItemPrototypes.cfg"
-OUTPUT_FILE = "ItemPrototypes_patch_NoSway.cfg"
+INPUT_FILE = "WeaponGeneralSetupPrototypes.cfg"
+OUTPUT_FILE = "WeaponGeneralSetupPrototypespatched.cfg"
 
 # Modos disponíveis:
 # "attach"             -> CanHoldBreath = false + Scope + AimingEffects
@@ -7,7 +7,7 @@ OUTPUT_FILE = "ItemPrototypes_patch_NoSway.cfg"
 # "attach_true"        -> Apenas CanHoldBreath = true
 # "attach_breath_true" -> CanHoldBreath = true + Scope + AimingEffects
 # "attach_scope_only"  -> Scope + AimingEffects, sem CanHoldBreath
-MODE = "attach"
+MODE = "weapon"
 
 
 def build_template(indent, name):
