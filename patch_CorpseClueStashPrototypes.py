@@ -2,7 +2,7 @@
 # Regras:
 # - Para cada node (struct.begin ... struct.end) de NÍVEL SUPERIOR:
 # - Remover todos os parâmetros existentes
-# - Manter apenas BaseSpawnChance = 0.5
+# - Manter apenas BaseSpawnChance = 0.5 ou 1.0
 # - Se não existir, inserir
 # - Garantir que struct.begin contenha a chave {bpatch}
 # - Remover todo conteúdo fora dos nodes (structs de nível superior)
@@ -11,7 +11,7 @@
 import re
 
 INPUT_FILE = "CorpseClueStashPrototypes.cfg"
-OUTPUT_FILE = "CorpseClueStashPrototypes_patch_StashFinder.cfg"
+OUTPUT_FILE = "CorpseClueStashPrototypespatched.cfg"
 
 MARKER_KEY = "BaseSpawnChance = 0.5"
 
