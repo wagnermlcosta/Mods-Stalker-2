@@ -1,0 +1,8 @@
+﻿bin2cfg.exe is a frozen build of bin2cfg.py by joric
+https://github.com/joric/stalker/wiki
+https://github.com/joric/stalker/blob/main/scripts/bin2cfg.py
+
+Based on JSON Converter by sdwvit: https://github.com/sdwvit/S2CfgToJSON
+Binary reader PR by thexii: https://github.com/sdwvit/S2CfgToJSON/pull/1
+
+See LICENSE in the joric/stalker repository (Unlicense).

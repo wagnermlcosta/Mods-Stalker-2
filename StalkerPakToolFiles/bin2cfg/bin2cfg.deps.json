@@ -1,0 +1,143 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0/win-x64",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {},
+    ".NETCoreApp,Version=v9.0/win-x64": {
+      "bin2cfg/5.1.0": {
+        "dependencies": {
+          "Microsoft.NET.ILLink.Tasks": "9.0.0",
+          "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "9.0.0"
+        },
+        "runtime": {
+          "bin2cfg.dll": {}
+        }
+      },
+      "runtimepack.Microsoft.NETCore.App.Runtime.win-x64/9.0.0": {
+        "runtime": {
+          "System.Collections.Concurrent.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          },
+          "System.Collections.Immutable.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          },
+          "System.Console.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          },
+          "System.Diagnostics.DiagnosticSource.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          },
+          "System.Diagnostics.StackTrace.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          },
+          "System.IO.Compression.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          },
+          "System.IO.MemoryMappedFiles.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          },
+          "System.Linq.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          },
+          "System.Private.CoreLib.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          },
+          "System.Reflection.Metadata.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          },
+          "System.Text.RegularExpressions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          }
+        },
+        "native": {
+          "Microsoft.DiaSymReader.Native.amd64.dll": {
+            "fileVersion": "14.40.33810.0"
+          },
+          "System.IO.Compression.Native.dll": {
+            "fileVersion": "9.0.24.52809"
+          },
+          "clretwrc.dll": {
+            "fileVersion": "9.0.24.52809"
+          },
+          "clrgc.dll": {
+            "fileVersion": "9.0.24.52809"
+          },
+          "clrgcexp.dll": {
+            "fileVersion": "9.0.24.52809"
+          },
+          "clrjit.dll": {
+            "fileVersion": "9.0.24.52809"
+          },
+          "coreclr.dll": {
+            "fileVersion": "9.0.24.52809"
+          },
+          "createdump.exe": {
+            "fileVersion": "9.0.24.52809"
+          },
+          "hostfxr.dll": {
+            "fileVersion": "9.0.24.52809"
+          },
+          "hostpolicy.dll": {
+            "fileVersion": "9.0.24.52809"
+          },
+          "mscordaccore.dll": {
+            "fileVersion": "9.0.24.52809"
+          },
+          "mscordaccore_amd64_amd64_9.0.24.52809.dll": {
+            "fileVersion": "9.0.24.52809"
+          },
+          "mscordbi.dll": {
+            "fileVersion": "9.0.24.52809"
+          },
+          "mscorrc.dll": {
+            "fileVersion": "9.0.24.52809"
+          },
+          "msquic.dll": {
+            "fileVersion": "2.4.3.0"
+          }
+        }
+      },
+      "Microsoft.NET.ILLink.Tasks/9.0.0": {}
+    }
+  },
+  "libraries": {
+    "bin2cfg/5.1.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "runtimepack.Microsoft.NETCore.App.Runtime.win-x64/9.0.0": {
+      "type": "runtimepack",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.NET.ILLink.Tasks/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zAwp213evC3UkimtVXRb+Dlgc/40QG145nmZDtp2LO9zJJMfrp+i/87BnXN7tRXEA4liyzdFkjqG1HE8/RPb4A==",
+      "path": "microsoft.net.illink.tasks/9.0.0",
+      "hashPath": "microsoft.net.illink.tasks.9.0.0.nupkg.sha512"
+    }
+  },
+  "runtimes": {
+    "win-x64": [
+      "win",
+      "any",
+      "base"
+    ]
+  }
+}
