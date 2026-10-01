@@ -2,7 +2,7 @@
 # Regras:
 # - Para cada node (struct.begin ... struct.end) de NÍVEL SUPERIOR:
 # - Remover todos os parâmetros existentes
-# - Manter apenas BaseSpawnChance = 0.5 ou 1.0
+# - Manter apenas BaseSpawnChance = 0.5, 1.0, 0,25, 0.0
 # - Se não existir, inserir
 # - Garantir que struct.begin contenha a chave {bpatch}
 # - Remover todo conteúdo fora dos nodes (structs de nível superior)
