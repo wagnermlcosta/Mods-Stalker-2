@@ -7,8 +7,8 @@ OUTPUT_FILE = "ItemPrototypespatched.cfg"
 # "attach_true"        -> Apenas CanHoldBreath = true
 # "attach_breath_true" -> CanHoldBreath = true + Scope + AimingEffects
 # "attach_scope_only"  -> Scope + AimingEffects, sem CanHoldBreath
-MODE = "attach_true"
 
+MODE = "attach_true"
 
 def build_template(indent, name):
     if MODE == "attach":
