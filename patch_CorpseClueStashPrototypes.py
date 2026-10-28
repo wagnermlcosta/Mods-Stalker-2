@@ -11,7 +11,7 @@
 import re
 
 INPUT_FILE = "CorpseClueStashPrototypes.cfg"
-OUTPUT_FILE = "CorpseClueStashPrototypespatched.cfg"
+OUTPUT_FILE = "CorpseClueStashPrototypes1.cfg"
 
 MARKER_KEY = "BaseSpawnChance = 0.5"
 
