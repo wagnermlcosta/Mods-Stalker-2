@@ -1,5 +1,5 @@
 INPUT_FILE = "ItemPrototypes.cfg"
-OUTPUT_FILE = "ItemPrototypespatched.cfg"
+OUTPUT_FILE = "ItemPrototypes1.cfg"
 
 # Modos disponíveis:
 # "attach"             -> CanHoldBreath = false + Scope + AimingEffects
