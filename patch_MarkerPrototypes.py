@@ -11,7 +11,7 @@
 import re
 
 INPUT_FILE = "MarkerPrototypes.cfg"
-OUTPUT_FILE = "MarkerPrototypes_patch_AllLocationsShown.cfg"
+OUTPUT_FILE = "MarkerPrototypes1.cfg"
 
 MARKER_KEY = "MarkerRevealDistance = 1000000.0"
 
